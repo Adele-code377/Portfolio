@@ -6,7 +6,7 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #0a1828 0%, #1a3a2e 50%, #0a1828 100%);
+  background: linear-gradient(135deg, #000000 0%, #203a1a 50%, #000000 100%);
   color: #e0e0e0;
   overflow-x: hidden;
 }
@@ -26,7 +26,7 @@ body {
   position: absolute;
   background: radial-gradient(
     circle,
-    rgba(100, 255, 150, 0.6) 0%,
+    rgba(100, 255, 149, 0.986) 0%,
     transparent 70%
   );
   border-radius: 50%;
@@ -59,15 +59,39 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  background: rgba(10, 24, 40, 0.7);
+  background: rgba(0, 26, 2, 0.7);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(100, 255, 150, 0.2);
+  border-bottom: 0px solid rgba(100, 255, 149, 0);
 }
 
-.logo {
+/* Conteneur du logo */
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espace entre l'image et le texte */
+  text-decoration: none;
+}
+
+/* Style de l'image du logo */
+.logo-img {
+  height: 90px;
+  width: auto;
+  filter: drop-shadow(
+    0 0 10px rgba(100, 255, 150, 0.5)
+  ); /* Rappel du lueur verte */
+  transition: transform 0.3s ease;
+}
+
+/* Animation au survol de l'image */
+.logo:hover .logo-img {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* On réapplique ton style dégradé uniquement sur le texte (le span) */
+.logo span {
   font-size: 28px;
   font-weight: bold;
-  background: linear-gradient(45deg, #64ff96, #00d4ff);
+  background: linear-gradient(135deg, #084200 0%, #ffffff 50%, #084200 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 30px rgba(100, 255, 150, 0.5);
@@ -80,7 +104,7 @@ nav ul {
 }
 
 nav a {
-  color: #e0e0e0;
+  color: #cdf7b5;
   text-decoration: none;
   font-size: 16px;
   position: relative;
@@ -88,7 +112,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #64ff96;
+  color: #d300fdcb;
 }
 
 nav a::after {
@@ -98,7 +122,7 @@ nav a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #64ff96, #00d4ff);
+  background: linear-gradient(90deg, #64ff96, #ea00ff);
   transition: width 0.3s;
 }
 
@@ -125,7 +149,7 @@ nav a:hover::after {
 .hero h1 {
   font-size: 72px;
   margin-bottom: 20px;
-  background: linear-gradient(45deg, #64ff96, #00d4ff, #64ff96);
+  background: linear-gradient(45deg, #64ff96, #ae00ff, #64ff96);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glow 3s ease-in-out infinite;
@@ -134,16 +158,16 @@ nav a:hover::after {
 @keyframes glow {
   0%,
   100% {
-    filter: drop-shadow(0 0 20px rgba(100, 255, 150, 0.5));
+    filter: drop-shadow(0 0 20px rgba(6, 226, 76, 0.5));
   }
   50% {
-    filter: drop-shadow(0 0 40px rgba(0, 212, 255, 0.8));
+    filter: drop-shadow(0 0 40px rgba(234, 0, 255, 0.8));
   }
 }
 
 .hero p {
   font-size: 24px;
-  color: #b0b0b0;
+  color: #e1ffbf;
   margin-bottom: 40px;
   line-height: 1.6;
 }
@@ -194,17 +218,17 @@ nav a:hover::after {
 }
 
 .btn-secondary {
-  border-color: #00d4ff;
-  color: #00d4ff;
-  background: rgba(0, 212, 255, 0.1);
+  border-color: #d400ff;
+  color: #dfa8f5;
+  background: rgba(225, 0, 255, 0.1);
 }
 
 .btn-secondary::before {
-  background: rgba(0, 212, 255, 0.3);
+  background: rgba(204, 0, 255, 0.3);
 }
 
 .btn-secondary:hover {
-  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(221, 94, 235, 0.685);
 }
 
 /* Section À propos */
@@ -234,7 +258,7 @@ nav a:hover::after {
   background: linear-gradient(
     135deg,
     rgba(100, 255, 150, 0.2),
-    rgba(0, 212, 255, 0.2)
+    rgba(3, 37, 0, 0.144)
   );
   display: flex;
   align-items: center;
@@ -277,7 +301,7 @@ nav a:hover::after {
 .about-content p {
   font-size: 18px;
   line-height: 1.8;
-  color: #c0c0c0;
+  color: #dcffd3;
   margin-bottom: 20px;
 }
 
@@ -305,24 +329,24 @@ nav a:hover::after {
 }
 
 .skill-card {
-  background: rgba(26, 58, 46, 0.3);
+  background: rgba(27, 58, 26, 0.3);
   padding: 30px;
   border-radius: 20px;
-  border: 1px solid rgba(100, 255, 150, 0.3);
+  border: 1px solid rgba(131, 255, 100, 0.3);
   transition: all 0.3s;
   cursor: pointer;
 }
 
 .skill-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(100, 255, 150, 0.3);
-  background: rgba(26, 58, 46, 0.5);
+  box-shadow: 0 15px 40px rgba(105, 255, 100, 0.3);
+  background: rgba(26, 58, 28, 0.5);
 }
 
 .skill-card h3 {
   font-size: 24px;
   margin-bottom: 15px;
-  color: #00d4ff;
+  color: #ae00ff;
 }
 
 .skill-bar {
@@ -336,7 +360,7 @@ nav a:hover::after {
 
 .skill-progress {
   height: 100%;
-  background: linear-gradient(90deg, #64ff96, #00d4ff);
+  background: linear-gradient(90deg, #64ff96, #ae00ff);
   border-radius: 10px;
   animation: fillBar 2s ease-out;
 }
