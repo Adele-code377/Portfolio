@@ -4,48 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Futuriste & Naturel</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/variables.css" />
   </head>
   <body>
     <!-- Particules animées -->
     <div class="particles" id="particles"></div>
 
     <!-- Header -->
-    <header>
-      <div class="logo">
-        <a href="#accueil">
-          <img
-            src="resource/logo.png"
-            alt="Logo MonPortfolio"
-            class="logo-img"
-          />
-          <span>MonPortfolio</span>
-        </a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#skills">Compétences</a></li>
-          <li><a href="page/projet.html">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#ProA">Projets Associatif</a></li>
-          <li><a href="#interet">Mes centres d'interets</a></li>
-        </ul>
-      </nav>
-    </header>
+    <header id="header-placeholder"></header>
 
     <!-- Section Hero -->
     <section class="hero" id="accueil">
-      <div class="hero-content">
-        <h1>Développeur Créatif</h1>
-        <p>
-          Je crée des expériences numériques qui fusionnent technologie et
-          nature, innovation et harmonie
-        </p>
-        <div class="cta-buttons">
-          <a href="page/projet.html" class="btn">Voir mes projets</a>
-          <a href="#contact" class="btn btn-secondary">Me contacter</a>
+      <div class="container">
+        <div class="glitch-wrapper">
+          <h1 class="glitch-text" data-text="Portfolio">Portfolio</h1>
         </div>
       </div>
     </section>
@@ -53,7 +26,46 @@
     <!-- Section À propos -->
     <section class="about" id="about">
       <div class="about-container">
-        <div class="about-image"></div>
+        <div class="container noselect">
+          <div class="canvas">
+            <div class="tracker tr-1"></div>
+            <div class="tracker tr-2"></div>
+            <div class="tracker tr-3"></div>
+            <div class="tracker tr-4"></div>
+            <div class="tracker tr-5"></div>
+            <div class="tracker tr-6"></div>
+            <div class="tracker tr-7"></div>
+            <div class="tracker tr-8"></div>
+            <div class="tracker tr-9"></div>
+            <div id="card">
+              <div class="card-content">
+                <div class="card-glare"></div>
+                <div class="cyber-lines">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <p id="prompt">HOVER ME</p>
+                <div class="title">CYBER<br />CARD</div>
+                <div class="glowing-elements">
+                  <div class="glow-1"></div>
+                  <div class="glow-2"></div>
+                  <div class="glow-3"></div>
+                </div>
+                <div class="subtitle">
+                  <span>INTERACTIVE</span>
+                  <span class="highlight">3D EFFECT</span>
+                </div>
+                <div class="card-particles">
+                  <span></span><span></span><span></span> <span></span
+                  ><span></span><span></span>
+                </div>
+                <div class="corner-elements">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="scan-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="about-content">
           <h2>À propos de moi</h2>
           <p>
@@ -74,84 +86,56 @@
       </div>
     </section>
 
-    <!-- Section Compétences -->
-    <section class="skills" id="skills">
-      <h2>Mes Compétences</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>HTML & CSS</h3>
-          <p>Création d'interfaces modernes et responsive</p>
-          <div class="skill-bar">
-            <div class="skill-progress" style="width: 90%"></div>
+    <!-- Section previsualisation des projet -->
+    <section class="preview" id="preview">
+      <h2>Previsualisation de mes projets</h2>
+      <div class="wrapper">
+        <div class="scroll-container">
+          <div class="scroll-content">
+            <div class="card">
+              <video
+                src="/assets/images/video/Teaserfinal.mp4"
+                alt="Produit 1"
+                controls
+                muted
+                autoplay
+              ></video>
+              <h3>Produit 1</h3>
+              <p>Description du produit 1.</p>
+              <button class="btn-ajouter-panier">Ajouter au Panier</button>
+            </div>
+
+            <div class="card">
+              <img
+                src="/assets/images/elements/Image_de_base_apia.png"
+                alt="Produit 2"
+              />
+              <h3>Produit 2</h3>
+              <p>Description du produit 2.</p>
+              <button class="btn-ajouter-panier">Ajouter au Panier</button>
+            </div>
+            <div class="card">
+              <img src="/assets/images/Avatar/Apia.png" alt="Produit 3" />
+              <h3>Produit 3</h3>
+              <p>Description du produit 3.</p>
+              <button class="btn-ajouter-panier">Ajouter au Panier</button>
+            </div>
           </div>
         </div>
-        <div class="skill-card">
-          <h3>JavaScript</h3>
-          <p>Développement d'applications interactives</p>
-          <div class="skill-bar">
-            <div class="skill-progress" style="width: 85%"></div>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>React</h3>
-          <p>Applications web dynamiques et performantes</p>
-          <div class="skill-bar">
-            <div class="skill-progress" style="width: 80%"></div>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>UI/UX Design</h3>
-          <p>Expériences utilisateur optimisées</p>
-          <div class="skill-bar">
-            <div class="skill-progress" style="width: 75%"></div>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>Node.js</h3>
-          <p>Développement backend et APIs</p>
-          <div class="skill-bar">
-            <div class="skill-progress" style="width: 70%"></div>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>Git & GitHub</h3>
-          <p>Gestion de versions et collaboration</p>
-          <div class="skill-bar">
-            <div class="skill-progress" style="width: 85%"></div>
-          </div>
-        </div>
+      </div>
+      <div class="cta-buttons">
+        <a href="page/projet.html" class="btn btn-secondary">
+          Voir mes projets
+        </a>
       </div>
     </section>
-    <footer>
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="images/mon-logo.png" alt="Logo" class="footer-logo-img" />
-          <span>MonPortfolio</span>
-        </div>
 
-        <div class="footer-links">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#projets">Projets</a></li>
-          </ul>
-        </div>
+    <!-- Section mon parcours -->
+    <section class="parcourt" id="parcourt">
+      <h2>Mon parcours</h2>
+    </section>
 
-        <div class="footer-socials">
-          <h4>Réseaux</h4>
-          <div class="social-icons">
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-            <a href="#">Twitter</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 MonPortfolio — Designé avec ❤️ et Nature</p>
-      </div>
-    </footer>
+    <footer id="footer-placeholder"></footer>
     <script src="js/script.js"></script>
   </body>
 </html>
