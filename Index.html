@@ -14,63 +14,39 @@
     <!-- Header -->
     <header id="header-placeholder"></header>
 
-    <!-- Section Hero -->
-    <section class="hero" id="accueil">
-      <div class="container1">
-        <div class="glitch-wrapper">
-          <h1 class="glitch-text" data-text="Portfolio">Portfolio</h1>
+    <section class="accueil-intro" id="accueil">
+      <div class="accueil-contenu">
+        <p class="accueil-sur-titre">Bienvenue sur mon portfolio</p>
+        <h1 class="accueil-nom">Adèle <span>Privat</span></h1>
+        <div class="accueil-metier">Étudiante en Ingénierie</div>
+
+        <div class="selecteur-theme">
+          <button
+            class="bouton-theme sombre active"
+            onclick="setTheme('dark', this)"
+            title="Mode Sombre"
+          >
+            <span class="icone-lune">🌙</span>
+          </button>
+          <button
+            class="bouton-theme clair"
+            onclick="setTheme('light', this)"
+            title="Mode Clair"
+          >
+            <span class="icone-soleil">☀️</span>
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- Section À propos -->
     <section class="about" id="about">
       <div class="about-container">
-        <div class="container noselect">
-          <div class="canvas">
-            <div class="tracker tr-1"></div>
-            <div class="tracker tr-2"></div>
-            <div class="tracker tr-3"></div>
-            <div class="tracker tr-4"></div>
-            <div class="tracker tr-5"></div>
-            <div class="tracker tr-6"></div>
-            <div class="tracker tr-7"></div>
-            <div class="tracker tr-8"></div>
-            <div class="tracker tr-9"></div>
-            <div id="card">
-              <div class="card-content">
-                <div class="card-glare"></div>
-                <div class="cyber-lines">
-                  <span></span><span></span><span></span><span></span>
-                </div>
-                <p id="prompt">Adèle PRIVAT</p>
-                <div class="avatar-container">
-                  <img
-                    src="/assets/images/Avatar/Adele.png"
-                    alt="avatar_moi"
-                    class="avatar-img"
-                  />
-                </div>
-                <div class="glowing-elements">
-                  <div class="glow-1"></div>
-                  <div class="glow-2"></div>
-                  <div class="glow-3"></div>
-                </div>
-                <div class="subtitle">
-                  <span>Etudiante en</span>
-                  <span class="highlight">Robotique et IA</span>
-                </div>
-                <div class="card-particles">
-                  <span></span><span></span><span></span> <span></span
-                  ><span></span><span></span>
-                </div>
-                <div class="corner-elements">
-                  <span></span><span></span><span></span><span></span>
-                </div>
-                <div class="scan-line"></div>
-              </div>
-            </div>
-          </div>
+        <div class="about-image-wrapper">
+          <img
+            src="/assets/images/elements/robot2.jpeg"
+            class="about-image"
+            alt="Robot"
+          />
         </div>
         <div class="about-content">
           <h2>À propos de moi</h2>
@@ -79,142 +55,155 @@
             développe des solutions web innovantes avec une approche durable et
             harmonieuse.
           </p>
+
           <p>
             Mon objectif est de créer des interfaces intuitives qui respectent à
             la fois l'utilisateur et notre planète, en utilisant les dernières
             technologies tout en gardant une empreinte écologique minimale.
           </p>
+
           <p>
             Chaque projet est une opportunité de repousser les limites du design
             et du développement.
           </p>
         </div>
       </div>
+      <div class="about-container">
+        <div class="about-content-bas">
+          <h2>À propos de moi</h2>
+          <p>
+            Passionné par l'alliance entre technologie et environnement, je
+            développe des solutions web innovantes avec une approche durable et
+            harmonieuse.
+          </p>
+
+          <p>
+            Mon objectif est de créer des interfaces intuitives qui respectent à
+            la fois l'utilisateur et notre planète, en utilisant les dernières
+            technologies tout en gardant une empreinte écologique minimale.
+          </p>
+
+          <p>
+            Chaque projet est une opportunité de repousser les limites du design
+            et du développement.
+          </p>
+        </div>
+        <div class="about-image-wrapper">
+          <img
+            src="/assets/images/elements/robot2.jpeg"
+            class="about-image-bas"
+            alt="Robot"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Section previsualisation des projet -->
-    <section class="preview" id="preview">
-      <h2>Previsualisation de mes projets</h2>
-      <div class="wrapper">
-        <div class="scroll-container">
-          <div class="scroll-content">
-            <div class="projet">
-              <video
-                src="/assets/images/video/Teaserfinal.mp4"
-                alt="Produit 1"
-                controls
-                muted
-                autoplay
-              ></video>
-              <h3>Produit 1</h3>
-              <p>Description du produit 1.</p>
-              <button class="btn-ajouter-panier">Ajouter au Panier</button>
-            </div>
+    <section class="project-preview" id="preview">
+      <h2 class="section-title">Mes Projets</h2>
 
-            <div class="projet">
-              <img
-                src="/assets/images/elements/Image_de_base_apia.png"
-                alt="Produit 2"
-              />
-              <h3>Produit 2</h3>
-              <p>Description du produit 2.</p>
-              <button class="btn-ajouter-panier">Ajouter au Panier</button>
-            </div>
-            <div class="projet">
-              <img src="/assets/images/Avatar/Apia.png" alt="Produit 3" />
-              <h3>Produit 3</h3>
-              <p>Description du produit 3.</p>
-              <button class="btn-ajouter-panier">Ajouter au Panier</button>
-            </div>
-            <div class="projet">
-              <img
-                src="/assets/images/elements/Image_de_base_apia.png"
-                alt="Produit 2"
-              />
-              <h3>Produit 4</h3>
-              <p>Description du produit 4.</p>
-              <button class="btn-ajouter-panier">Ajouter au Panier</button>
-            </div>
-            <div class="projet">
-              <img
-                src="/assets/images/elements/Image_de_base_apia.png"
-                alt="Produit 2"
-              />
-              <h3>Produit 5</h3>
-              <p>Description du produit 5.</p>
-              <button class="btn-ajouter-panier">Ajouter au Panier</button>
-            </div>
-            <div class="projet">
-              <img
-                src="/assets/images/elements/Image_de_base_apia.png"
-                alt="Produit 2"
-              />
-              <h3>Produit 6</h3>
-              <p>Description du produit 6.</p>
-              <button class="btn-ajouter-panier">Ajouter au Panier</button>
-            </div>
-            <div class="projet">
-              <video
-                src="/assets/images/video/Teaserfinal.mp4"
-                alt="Produit 1"
-                controls
-                muted
-                autoplay
-              ></video>
-              <h3>Produit 1</h3>
-              <p>Description du produit 1.</p>
-              <button class="btn-ajouter-panier">Ajouter au Panier</button>
-            </div>
-
-            <div class="projet">
-              <img
-                src="/assets/images/elements/Image_de_base_apia.png"
-                alt="Produit 2"
-              />
-              <h3>Produit 2</h3>
-              <p>Description du produit 2.</p>
-              <button class="btn-ajouter-panier">Ajouter au Panier</button>
-            </div>
-            <div class="projet">
-              <img src="/assets/images/Avatar/Apia.png" alt="Produit 3" />
-              <h3>Produit 3</h3>
-              <p>Description du produit 3.</p>
-              <button class="btn-ajouter-panier">Ajouter au Panier</button>
-            </div>
-            <div class="projet">
-              <img
-                src="/assets/images/elements/Image_de_base_apia.png"
-                alt="Produit 2"
-              />
-              <h3>Produit 4</h3>
-              <p>Description du produit 4.</p>
-              <button class="btn-ajouter-panier">Ajouter au Panier</button>
-            </div>
-            <div class="projet">
-              <img
-                src="/assets/images/elements/Image_de_base_apia.png"
-                alt="Produit 2"
-              />
-              <h3>Produit 5</h3>
-              <p>Description du produit 5.</p>
-              <button class="btn-ajouter-panier">Ajouter au Panier</button>
-            </div>
-            <div class="projet">
-              <img
-                src="/assets/images/elements/Image_de_base_apia.png"
-                alt="Produit 2"
-              />
-              <h3>Produit 6</h3>
-              <p>Description du produit 6.</p>
-              <button class="btn-ajouter-panier">Ajouter au Panier</button>
-            </div>
+      <div class="carousel-container">
+        <article class="card">
+          <div class="card-image-container">
+            <img src="/assets/images/Avatar/Apia.png" alt="Projet Apia" />
+            <span class="card-status status-ongoing">En cours</span>
           </div>
-        </div>
-      </div>
-      <div class="cta-buttons">
-        <a href="page/projet.html" class="btn btn-secondary">
-          Voir mes projets
-        </a>
+
+          <div class="card-content">
+            <p class="card-topics">Web Design • Front-end</p>
+            <h3 class="card-title">Apia Avatar</h3>
+            <p class="card-description">
+              Création d'une interface interactive pour la personnalisation
+              d'avatars en temps réel.
+            </p>
+
+            <div class="card-skills">
+              <span class="skill-badge">HTML</span>
+              <span class="skill-badge">CSS</span>
+              <span class="skill-badge">JS</span>
+            </div>
+
+            <a href="#" class="btn-details">Voir le projet →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image-container">
+            <img
+              src="/assets/images/elements/Image_de_base_apia.png"
+              alt="Plateforme E-learning"
+            />
+            <span class="card-status status-done">Terminé</span>
+          </div>
+
+          <div class="card-content">
+            <p class="card-topics">UI/UX • Développement</p>
+            <h3 class="card-title">E-Learning Hub</h3>
+            <p class="card-description">
+              Une plateforme complète de cours en ligne avec suivi de
+              progression personnalisé.
+            </p>
+
+            <div class="card-skills">
+              <span class="skill-badge">React</span>
+              <span class="skill-badge">Node.js</span>
+              <span class="skill-badge">SASS</span>
+            </div>
+
+            <a href="#" class="btn-details">Voir le projet →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image-container">
+            <img
+              src="/assets/images/logo/LogoApia_blanc.png"
+              alt="Branding Apia"
+            />
+            <span class="card-status status-ongoing">En cours</span>
+          </div>
+
+          <div class="card-content">
+            <p class="card-topics">Design Graphique • Branding</p>
+            <h3 class="card-title">Identité Visuelle</h3>
+            <p class="card-description">
+              Conception d'un univers graphique moderne mêlant minimalisme et
+              technologie.
+            </p>
+
+            <div class="card-skills">
+              <span class="skill-badge">Illustrator</span>
+              <span class="skill-badge">Figma</span>
+            </div>
+
+            <a href="#" class="btn-details">Voir le projet →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image-container">
+            <img src="/assets/images/Avatar/Adele.png" alt="Projet Apia" />
+            <span class="card-status status-ongoing">En cours</span>
+          </div>
+
+          <div class="card-content">
+            <p class="card-topics">Web Design • Front-end</p>
+            <h3 class="card-title">Apia Avatar</h3>
+            <p class="card-description">
+              Création d'une interface interactive pour la personnalisation
+              d'avatars en temps réel.
+            </p>
+
+            <div class="card-skills">
+              <span class="skill-badge">HTML</span>
+              <span class="skill-badge">CSS</span>
+              <span class="skill-badge">JS</span>
+            </div>
+
+            <a href="#" class="btn-details">Voir le projet →</a>
+          </div>
+        </article>
+        <div class="carousel-line"></div>
       </div>
     </section>
 

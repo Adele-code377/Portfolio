@@ -157,25 +157,70 @@ function handleSmoothScroll(e) {
   }
 }
 
-// Effet de glitch intense aléatoire
-const glitchText = document.querySelector(".glitch-text");
+// --- 8. changer le theme ---
+function setTheme(theme) {
+  const body = document.body;
+  // Correction ici : on cible .bouton-theme
+  const buttons = document.querySelectorAll(".bouton-theme");
 
-setInterval(() => {
-  if (Math.random() > 0.92) {
-    glitchText.style.transform = `skewX(-10deg) translate(${Math.random() * 60 - 30}px, ${Math.random() * 40 - 20}px) skew(${Math.random() * 6 - 3}deg)`;
-    setTimeout(() => {
-      glitchText.style.transform = "skewX(-10deg) translate(0, 0) skew(0deg)";
-    }, 80);
+  // 1. Gérer la classe sur le body
+  if (theme === "light") {
+    body.classList.add("light-mode");
+  } else {
+    body.classList.remove("light-mode");
   }
-}, 100);
 
-// Changement de couleur aléatoire
-setInterval(() => {
-  if (Math.random() > 0.97) {
-    const colors = ["#00ff41", "#39ff14", "#9d00ff", "#8a2be2"];
-    glitchText.style.color = colors[Math.floor(Math.random() * colors.length)];
-    setTimeout(() => {
-      glitchText.style.color = "#00ff41";
-    }, 150);
+  // 2. Gérer l'état actif des boutons
+  buttons.forEach((btn) => {
+    btn.classList.remove("active");
+    // On vérifie si le bouton a la classe 'sombre' pour le thème 'dark'
+    // ou 'clair' pour le thème 'light'
+    if (
+      (theme === "dark" && btn.classList.contains("sombre")) ||
+      (theme === "light" && btn.classList.contains("clair"))
+    ) {
+      btn.classList.add("active");
+    }
+  });
+
+  // 3. Sauvegarder
+  localStorage.setItem("preferred-theme", theme);
+}
+
+// Au chargement
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("preferred-theme") || "dark"; // "dark" par défaut
+  setTheme(savedTheme);
+});
+
+//Pour les carte de previsualisation de projet
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".card");
+  let currentIndex = 1; // La carte du milieu par défaut (index 1)
+
+  function updateCarousel() {
+    cards.forEach((card, index) => {
+      card.classList.remove("active", "prev", "next", "hidden");
+
+      if (index === currentIndex) {
+        card.classList.add("active");
+      } else if (index === (currentIndex - 1 + cards.length) % cards.length) {
+        card.classList.add("prev");
+      } else if (index === (currentIndex + 1) % cards.length) {
+        card.classList.add("next");
+      } else {
+        card.classList.add("hidden");
+      }
+    });
   }
-}, 100);
+
+  cards.forEach((card, index) => {
+    card.addEventListener("click", () => {
+      currentIndex = index;
+      updateCarousel();
+    });
+  });
+
+  // Initialisation
+  updateCarousel();
+});
